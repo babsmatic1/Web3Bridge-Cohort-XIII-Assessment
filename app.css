@@ -1,0 +1,161 @@
+/* Custom styles to enhance the visual appeal and ensure responsiveness */
+        body {
+            font-family: 'Inter', sans-serif; /* Using Inter font as per guidelines */
+            background-color: #1a202c; /* Dark background similar to React version */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #ffffff; /* White text color */
+        }
+        .container {
+            background-color: #2d3748; /* Darker background for the quiz box */
+            padding: 2rem;
+            border-radius: 1rem; /* Rounded corners */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+            width: 100%;
+            max-width: 480px; /* Max width for larger screens */
+            border: 2px solid #8B5CF6; /* Purple border */
+            animation: fadeIn 0.8s ease-out; /* Simple fade-in animation for the container */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #A78BFA; /* Purple heading color */
+            font-size: 2.25rem; /* Large font size */
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .question-text {
+            color: #F6E05E; /* Yellow question text color */
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .option-button {
+            background-color: #4A5568; /* Dark gray for options */
+            color: #ffffff;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem; /* Rounded button corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease-in-out;
+            border: 2px solid #4A5568; /* Default border color */
+            cursor: pointer;
+            width: 100%; /* Full width */
+            text-align: left; /* Align text to the left */
+        }
+
+        .option-button:hover:not(:disabled) {
+            background-color: #2D3748; /* Darker on hover */
+            transform: scale(1.02); /* Slight scale effect on hover */
+            border-color: #6B46C1; /* Purple border on hover */
+        }
+
+        .option-button:disabled {
+            cursor: not-allowed;
+            opacity: 0.8;
+        }
+
+        /* Feedback styling */
+        .feedback-correct {
+            background-color: #2F855A; /* Green for correct */
+            border-color: #38A169;
+        }
+        .feedback-incorrect {
+            background-color: #C53030; /* Red for incorrect */
+            border-color: #E53E3E;
+        }
+
+        .selected-correct {
+            background-color: #2F855A;
+            border-color: #38A169;
+        }
+
+        .selected-incorrect {
+            background-color: #C53030;
+            border-color: #E53E3E;
+        }
+
+        .correct-answer-highlight {
+            background-color: #38A169; /* Green for correct answer when another was selected */
+            border-color: #48BB78;
+        }
+
+        .next-button {
+            background-color: #8B5CF6; /* Purple for next button */
+            color: #ffffff;
+            font-weight: bold;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .next-button:hover:not(:disabled) {
+            background-color: #6B46C1; /* Darker purple on hover */
+            transform: scale(1.05); /* Pop effect */
+        }
+
+        .next-button:disabled {
+            background-color: #6B7280; /* Gray when disabled */
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .timer-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .timer-red {
+            color: #EF4444; /* Red for low time */
+            animation: pulse 1s infinite; /* Pulse animation for low time */
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .game-over-screen {
+            text-align: center;
+        }
+        .game-over-screen h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .game-over-screen p {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        .game-over-screen .score-text {
+            font-weight: bold;
+            color: #38A169; /* Green for score */
+        }
+        .restart-button {
+            background-color: #8B5CF6;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            width: 100%;
+            cursor: pointer;
+        }
+        .restart-button:hover {
+            background-color: #6B46C1;
+            transform: scale(1.05);
+        }
